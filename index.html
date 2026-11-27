@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gracias, Marc · Para Nerea</title>
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#fbf4ec;--card:#fff;--fg:#1d1612;--mut:#6d5f55;--red:#c8102e;--gold:#b8860b;--line:#e8d9c8;color-scheme:light}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0c0b;--card:#1a1614;--fg:#f4ece4;--mut:#b3a396;--red:#ff3b52;--gold:#e6b84a;--line:#2e2622;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e0c0b;--card:#1a1614;--fg:#f4ece4;--mut:#b3a396;--red:#ff3b52;--gold:#e6b84a;--line:#2e2622;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html,body{margin:0}
+body{background:var(--bg);color:var(--fg);font:17px/1.65 Georgia,"Times New Roman",serif}
+section{max-width:960px;margin:0 auto;padding:72px 22px}
+h1,h2,h3,.sans{font-family:"Helvetica Neue",Arial,sans-serif}
+.hero{min-height:92vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;
+background:radial-gradient(ellipse at 50% 30%,color-mix(in srgb,var(--red) 22%,transparent),transparent 65%)}
+.num{font:900 clamp(110px,28vw,260px)/0.9 "Helvetica Neue",Arial,sans-serif;color:var(--red);letter-spacing:-6px;margin:0}
+.for{letter-spacing:.35em;text-transform:uppercase;font-size:13px;color:var(--gold);margin:0 0 18px}
+h1{font-size:clamp(30px,6vw,56px);margin:10px 0 8px;line-height:1.1}
+.sub{color:var(--mut);max-width:560px;margin:0 auto}
+.badge{display:inline-block;margin-top:26px;padding:8px 16px;border:1px solid var(--red);border-radius:99px;color:var(--red);font:600 13px "Helvetica Neue",Arial,sans-serif;letter-spacing:.08em}
+h2{font-size:clamp(26px,4.5vw,40px);margin:0 0 10px;line-height:1.15}
+.lead{color:var(--mut);margin:0 0 36px;max-width:640px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media (max-width:640px){.grid{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:20px 18px;position:relative;overflow:hidden;opacity:0;transform:translateY(16px);transition:.6s}
+.card.in{opacity:1;transform:none}
+.card .n{position:absolute;right:12px;top:-6px;font:900 74px "Helvetica Neue",Arial,sans-serif;color:var(--red);opacity:.12}
+.card .y{font:800 34px "Helvetica Neue",Arial,sans-serif;color:var(--red);margin:0}
+.card .c{font:600 12px "Helvetica Neue",Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin:2px 0 10px}
+.card p{margin:0 0 14px;font-size:15px;line-height:1.5}
+a.btn{display:inline-block;font:600 13px "Helvetica Neue",Arial,sans-serif;color:var(--red);text-decoration:none;border-bottom:1px solid currentColor}
+.card.big{grid-column:1/-1;background:linear-gradient(135deg,var(--red),#7a0a1c);color:#fff;border:0}
+.card.big .y,.card.big .c,.card.big a.btn{color:#fff}
+.quote{text-align:center;background:var(--card);border-block:1px solid var(--line);max-width:none}
+.quote blockquote{margin:0 auto;max-width:760px;font-size:clamp(26px,5.5vw,48px);line-height:1.25;font-style:italic}
+.quote blockquote span{display:block;color:var(--red);margin-top:.35em}
+.quote cite{display:block;margin-top:26px;font:600 14px "Helvetica Neue",Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-style:normal}
+.vids{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.v{display:flex;gap:14px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px;text-decoration:none;color:var(--fg)}
+.v:hover{border-color:var(--red)}
+.play{flex:none;width:48px;height:48px;border-radius:50%;background:var(--red);display:grid;place-items:center}
+.play::after{content:"";border-left:14px solid #fff;border-block:9px solid transparent;margin-left:4px}
+.v b{display:block;font:700 15px "Helvetica Neue",Arial,sans-serif}
+.v small{color:var(--mut);font-size:13px}
+.letter{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:34px 28px;max-width:680px;margin:0 auto;font-size:19px}
+.letter p{margin:0 0 1em}
+.letter .sig{color:var(--red);font-style:italic;margin:0}
+.fig{max-width:760px;margin:0 auto;padding:10px 22px 40px;text-align:center}
+.fig svg{width:100%;height:auto;border-radius:20px;display:block;border:1px solid var(--line)}
+.fig p{color:var(--mut);font-size:14px;margin:12px 0 0;font-style:italic}
+/* Vídeo responsive 16:9 */
+.fig .video{position:relative;width:100%;aspect-ratio:16/9;border-radius:20px;overflow:hidden;border:1px solid var(--line);background:#000}
+.fig .video iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+@supports not (aspect-ratio:16/9){.fig .video{height:0;padding-bottom:56.25%}}
+footer{text-align:center;color:var(--mut);padding:50px 22px 70px;font-size:14px}
+footer .big93{font:900 46px "Helvetica Neue",Arial,sans-serif;color:var(--red);display:block}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <p class="for sans">Para Nerea</p>
+  <p class="num">93</p>
+  <h1>Gracias, Marc.</h1>
+  <p class="sub">Hay deportistas que ganan carreras. Y hay otros que nos enseñan a levantarnos. Esta página es para ti, Nerea, porque hoy se despide uno de los grandes, el que más simboliza tu filosofía: un guerrero como tú.</p>
+</section>
+
+<div class="fig">
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/YMumj0ReSGE" referrerpolicy="strict-origin-when-cross-origin" title="Marc Marquez is your 2026 MotoGP WORLD CHAMPION 🏆" loading="lazy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+</div>
+
+<section>
+  <h2>Diez títulos. Una forma de vivir.</h2>
+  <p class="lead">Desde un chaval de Cervera con su 125 hasta el piloto que volvió cuando nadie lo esperaba. Cada campeonato, una historia distinta.</p>
+  <div class="grid" id="titles"></div>
+</section>
+
+<section class="quote">
+  <blockquote>«Si te caes te levantas.<span>Si te cortan los pies te salen las alas.»</span></blockquote>
+  <cite>Marc Márquez</cite>
+</section>
+
+
+<section>
+  <div class="letter">
+    <p>Nerea:</p>
+    <p>Marc se va, pero lo que nos deja se queda. Cada vez que parecía acabado, volvía más fuerte. Y eso, más que los diez títulos, es lo que de verdad importa.</p>
+    <p>Que cuando algo se tuerza, te acuerdes de esas dos frases: si te caes, te levantas. Y que, aunque te cortaran los pies, a ti te saldrían alas.</p>
+    <p class="sig">Con cariño Omar.</p>
+  </div>
+</section>
+
+<footer>
+  <span class="big93">93</span>
+  Gracias por tanto, Marc. Gracias por todo, campeón.
+</footer>
+
+<script>
+var T=[
+["2010","125cc","El primer grito de campeón. Un chaval de Cervera que ya mostraba que no tenía miedo a nada."],
+["2012","Moto2","Remontadas y garra para dar el salto a la categoría reina."],
+["2013","MotoGP","Llegó, vio y ganó: campeón en su temporada de debut y el más joven de la historia."],
+["2014","MotoGP","Diez victorias seguidas. Un año de dominio absoluto."],
+["2016","MotoGP","Madurez y cabeza fría para ganar con inteligencia."],
+["2017","MotoGP","Una batalla hasta la última curva, ganada con coraje."],
+["2018","MotoGP","Un año casi perfecto, de los más sólidos de su carrera."],
+["2019","MotoGP","El año más redondo: dominio total, el sexto en la categoría reina."],
+["2025","MotoGP","El regreso imposible, tras lesiones y años duros. Se cayó mil veces y se levantó mil una."],
+["2026","MotoGP","El décimo mundial. La forma más bonita de decir adiós."]
+];
+var LINKS={"2010":"https://www.youtube.com/watch?v=x-i_wCHkOn0","2012":"https://www.youtube.com/watch?v=L3WfLoTvkrA","2013":"https://www.youtube.com/watch?v=WSBFdBlD0as","2014": "https://www.youtube.com/watch?v=CBj7eiqML10", "2016": "https://www.youtube.com/watch?v=2g3JBI4DQAI", "2017": "https://www.youtube.com/watch?v=qcijKvirI5g" ,"2018":"https://www.youtube.com/watch?v=WIuc9dhweU8", "2019" : "https://www.youtube.com/watch?v=Cjd3u8O0bLk", "2025":"https://www.youtube.com/watch?v=VgMl6fvCe8Y","2026":"https://www.youtube.com/watch?v=-jwUSo_poOU"};
+var g=document.getElementById("titles");
+T.forEach(function(t,i){
+  var d=document.createElement("div");
+  d.className="card"+(i===9?" big":"");
+  var q="Marc+M%C3%A1rquez+campe%C3%B3n+"+encodeURIComponent(t[1])+"+"+t[0];
+  var href=LINKS[t[0]]||"https://www.youtube.com/results?search_query="+q;
+  d.innerHTML='<span class="n">'+(i+1)+'</span><p class="y">'+t[0]+'</p><p class="c">'+t[1]+'</p><p>'+t[2]+'</p><a class="btn" target="_blank" rel="noopener" href="'+href+'">Ver el momento →</a>';
+  g.appendChild(d);
+});
+var cs=document.querySelectorAll(".card");
+try{
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}})},{threshold:.15});
+  cs.forEach(function(c){io.observe(c)});
+}catch(e){cs.forEach(function(c){c.classList.add("in")})}
+</script>
+</body>
+</html>
